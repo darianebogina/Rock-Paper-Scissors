@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    font-size: 1.6rem;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+
+    background-color: #fffcfc;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 100px;
+    margin: 0;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    font-size: 3rem;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+#rock {
+    background-color: rgb(255, 160, 205);
+}
+
+#paper {
+    background-color: rgb(230, 211, 148);
+}
+
+#scissors {
+    background-color: rgb(202, 142, 250);
+}
+
+#computer {
+    visibility: hidden;
+}
+
+#result{
+    visibility: hidden;
+}
+
+#scores {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#user-score {
+    color: rgb(0, 0, 255);
+}
+
+#computer-score {
+    color: rgb(255, 0, 25);
+}
+
+@media (max-width: 450px) {
+    #scores {
+        flex-direction: column;
+    }
+}
