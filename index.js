@@ -4,6 +4,7 @@ const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const userScoreElement = document.getElementById("user-score");
 const computerScoreElement = document.getElementById("computer-score");
+const computerMove = document.getElementById("computer");
 let userScore = 0;
 let computerScore = 0;
 
@@ -12,12 +13,24 @@ let userState = "";
 function getComputerState() {
     const computerStates = ["rock", "paper", "scissors"];
     let stateIndex = Math.floor(Math.random() * 3);
+    switch (stateIndex) {
+        case 0:
+            computerMove.innerHTML = "&#128074;";
+            break;
+        case 1:
+            computerMove.innerHTML = "&#9995;";
+            break;
+        case 2:
+            computerMove.innerHTML = "&#9996;";
+            break;
+    }
     return computerStates[stateIndex];
 }
 
 function result() {
     let computerState = getComputerState();
-    winner.style.visibility = "visible";
+    winner.style.display = "flex";
+    computerMove.style.display = "flex";
     if ((userState === "rock" && computerState === "scissors") ||
         (userState === "scissors" && computerState === "paper") ||
         (userState === "paper" && computerState === "rock")) {
